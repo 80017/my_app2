@@ -13,7 +13,7 @@ jobs:
       - docker build -t travis-ci-build-stages-demo .
       - docker images
       - docker tag travis-ci-build-stages-demo $DOCKER_USERNAME/travis-ci-build-stages-demo
-      - docker push $DOCKER_USERNAME/travis-ci-build-stages-demo
+      - docker push 9099/travis-ci-build-stages-demo
     - stage: test
       script: 
       - docker run --rm $DOCKER_USERNAME/travis-ci-build-stages-demo cat test.txt
