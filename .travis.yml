@@ -9,12 +9,12 @@ jobs:
   include:
     - stage: build docker image
       script:
-      - docker login -u="9099" -p="123456"
+      - docker login -u="$DOCKER_USERNAME" -p="$DOCKER_PASSWORD"
       - docker build -t travis-ci-build-stages-demo .
       - docker images
-      - docker tag travis-ci-build-stages-demo 9099/travis-ci-build-stages-demo
-      - docker push 9099/travis-ci-build-stages-demo
+      - docker tag travis-ci-build-stages-demo $DOCKER_USERNAME/travis-ci-build-stages-demo
+      - docker push $DOCKER_USERNAME/travis-ci-build-stages-demo
     - stage: test
       script: 
-      - docker run --rm 9099/travis-ci-build-stages-demo cat test.txt
+      - docker run --rm $DOCKER_USERNAME/travis-ci-build-stages-demo cat test.txt
     
