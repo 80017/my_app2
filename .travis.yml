@@ -15,6 +15,6 @@ jobs:
       - docker tag travis-ci-build-stages-demo 9099/travis-ci-build-stages-demo
       - docker push 9099/travis-ci-build-stages-demo
     - stage: test
-      script: docker run --rm 9099/travis-ci-build-stages-demo cat test.txt
-    - script: docker run --rm 9099/travis-ci-build-stages-demo cat test.txt
+      script: 
+      - docker run --rm 9099/travis-ci-build-stages-demo cat test.txt
     
