@@ -1,8 +1,10 @@
 sudo: required
 
+language: node
+
 services:
   - docker
-
+  
 jobs:
   include:
     - stage: build docker image
