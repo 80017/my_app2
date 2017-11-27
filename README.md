@@ -1,4 +1,4 @@
-****** Install npm
+***** Install npm
 
 npm install
 
