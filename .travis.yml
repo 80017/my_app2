@@ -16,6 +16,6 @@ jobs:
       - docker push $DOCKER_USERNAME/test
     - stage: test
       script: 
-      - ./build.sh
+      - "./build.sh"
       
  
