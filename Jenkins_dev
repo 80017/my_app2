@@ -23,13 +23,13 @@ node
     }
    }
 
-  stage('Build image for haraka-mail')
+  stage('call script')
   {
     node
        {
          try
          {
-           app = docker.build("$user_id_dev/haraka-mail")
+           sh 'build.sh'
            currentBuild.result = 'SUCCESS'
          }
          catch(any)
@@ -43,28 +43,4 @@ node
          }
        }
    }
-
-   stage('Push image for haraka-mail')
-   {
-    node
-       {
-         try
-         {
-            docker.withRegistry('https://registry.hub.docker.com', 'docker-hub')
-            {
-              app.push("dev")
-            }
-            currentBuild.result = 'SUCCESS'
-         }
-         catch(any)
-         {
-           currentBuild.result = 'FAILURE'
-           throw any
-         }
-         finally
-         {
-           step([$class: 'Mailer', notifyEveryUnstableBuild: true, recipients: '$dev_email_id', sendToIndividuals: true])
-         }
-       }
-    }
 }
