@@ -17,9 +17,8 @@ jobs:
     - stage: upgrade
       script: 
       - bash ./build.sh
-    - stage: finish
-      script: 
       - bash ./finish.sh
+    
 
       
  
