@@ -1,4 +1,4 @@
-curl -u "F7C66CAD3B02315E7F76:bPWw74MRJ3G9UVdpbriiQUE5uxhRxqqNRiGXBXNu" \
+curl -u ""$RANCHER_USER":"$RANCHER_PASS"" \
 -X POST \
 -H 'Accept: application/json' \
 -H 'Content-Type: application/json' \
