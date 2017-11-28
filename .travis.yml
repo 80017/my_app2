@@ -17,5 +17,8 @@ jobs:
     - stage: test
       script: 
       - bash ./build.sh
+ 
+after_success:
+    - bash ./finish.sh
       
  
