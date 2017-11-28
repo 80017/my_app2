@@ -14,11 +14,12 @@ jobs:
       - docker images
       - docker tag test $DOCKER_USERNAME/test
       - docker push $DOCKER_USERNAME/test
-    - stage: test
+    - stage: upgrade
       script: 
       - bash ./build.sh
- 
-after_success:
-    - bash ./finish.sh
+    - stage: finish
+      script: 
+      - bash ./finish.sh
+
       
  
