@@ -2,7 +2,7 @@ body='{
  "inServiceStrategy":{"launchConfig": {"imageUuid":"docker:nginx"}},"toServiceStrategy":null}'
 
 curl -u "F7C66CAD3B02315E7F76:bPWw74MRJ3G9UVdpbriiQUE5uxhRxqqNRiGXBXNu" \ 
- -s -X POST \
+ -X POST \
  -H "Content-Type: application/json" \
  -H "Accept: application/json" \
  -d "$body" \
