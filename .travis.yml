@@ -19,7 +19,7 @@ jobs:
       - bash ./build.sh
     - stage: finish
       script:
-      - if [[ "$TRAVIS_TEST_RESULT" == "0" ]] then bash ./finish.sh; fi
+      - bash ./finish.sh
 
       
  
