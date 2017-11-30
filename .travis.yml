@@ -18,6 +18,9 @@ jobs:
       - docker images
       - docker tag test:"$DOCKER_IMAGE_TAG" $DOCKER_USERNAME/test:"$DOCKER_IMAGE_TAG"
       - docker push $DOCKER_USERNAME/test:"$DOCKER_IMAGE_TAG"
+    - stage: Upgrade Rancher Service 
+      script: 
+      - bash ./build.sh
     
 
 
