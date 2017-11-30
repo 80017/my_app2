@@ -18,6 +18,12 @@ jobs:
       - docker images
       - docker tag test $DOCKER_USERNAME/test
       - docker push $DOCKER_USERNAME/test
+    - stage: build next docker image
+      script:
+      - docker build -t test .
+      - docker images
+      - docker tag test $DOCKER_USERNAME/test
+      - docker push $DOCKER_USERNAME/test
 
 
       
