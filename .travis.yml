@@ -14,10 +14,10 @@ jobs:
     - stage: build docker image
       script:
       - docker login -u="$DOCKER_USERNAME" -p="$DOCKER_PASSWORD"
-      - docker build -t test:dev .
+      - docker build -t test:"$DOCKER_IMAGE_TAG" .
       - docker images
-      - docker tag test:dev $DOCKER_USERNAME/test:dev
-      - docker push $DOCKER_USERNAME/test:dev
+      - docker tag test:"$DOCKER_IMAGE_TAG" $DOCKER_USERNAME/test:"$DOCKER_IMAGE_TAG"
+      - docker push $DOCKER_USERNAME/test:"$DOCKER_IMAGE_TAG"
     
 
 
