@@ -18,12 +18,7 @@ jobs:
       - docker images
       - docker tag test $DOCKER_USERNAME/test
       - docker push $DOCKER_USERNAME/test
-    - stage: upgrade
-      script: 
-      - bash ./build.sh
-    - stage: finish
-      script:
-      - bash ./finish.sh
+
 
       
  
