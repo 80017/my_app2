@@ -1,4 +1,4 @@
-sleep 10
+sleep 10m
 
 curl -u "8275C9CC42066F469BF8:cL3Xc9ZQsngj1X8bsbGU7Ghje22zazdY55FJLZ7X" \
 -X POST \
