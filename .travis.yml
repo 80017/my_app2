@@ -13,7 +13,7 @@ jobs:
   include:
     - stage: Upgrade Rancher Service 
       script: 
-      - echo "'http://rancher.flowz.com:8080/v2-beta/projects/1a29/services/+$ID+?action=upgrade'"
+      - echo "'http://rancher.flowz.com:8080/v2-beta/projects/1a29/services/$ID?action=upgrade'"
   
 
 
